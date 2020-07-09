@@ -2,6 +2,8 @@
 
 This is a template repository for research projects in our group. It outlines what projects should contain to make them known people, easy to adopt, and verifiable. This template summarizes what should be included in your project's repository.
 
+This template contains a basic [Flask](https://flask.palletsprojects.com/) web app, which requests data from a server and visualizes it in a bar chart.
+
 ## Paper
 
 You should include a link to your paper in arXiv. If you have given a talk, then you should also include a link to your presentation slides.
@@ -18,7 +20,13 @@ TODO: add instructions for how to host a tool on our own servers.
 
 You should include intstructions for how a user can run your software on their own.
 
-TODO: add details for how docker can be used to make it easy for someone to deploy your tool.
+### Docker
+
+If you are making a web app, then one way to make it easy for other people to run and deploy your code is by using [Docker](https://www.docker.com), which let you package your app into [containers](https://www.docker.com/resources/what-container).
+
+One benefit of using docker is that other people only need to have Docker installed to run your web app, regardless of what languages, technologies, or depencies your application uses.
+
+The example app is based off of the popular [uwsgi-nginx-flask Docker image](https://hub.docker.com/r/tiangolo/uwsgi-nginx-flask/). To run the example app, clone this repository, execute the command `docker-compose up`, and go to [http://127.0.0.1/](http://127.0.0.1/). You can stop the app with `docker-compose down`.
 
 ## Experimental Data
 
